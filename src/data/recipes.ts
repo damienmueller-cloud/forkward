@@ -41,6 +41,45 @@ function filterAvoid(items: string[], avoid: string[]): string[] {
   return items.filter((i) => !isAvoided(i, avoid))
 }
 
+/** True if template title or core prefer terms clash with avoid list. */
+function conflictsAvoid(t: Template, avoid: string[]): boolean {
+  if (avoid.length === 0) return false
+  if (isAvoided(t.title, avoid)) return true
+  // Skip when a signature prefer item (appears in title) is avoided
+  const titleN = norm(t.title)
+  for (const p of t.prefer) {
+    const pn = norm(p)
+    if (pn.length < 3) continue
+    if (titleN.includes(pn) && isAvoided(p, avoid)) return true
+  }
+  return false
+}
+
+/** Strip any avoid-matching tokens from free text fields (defence in depth). */
+function scrubText(text: string, avoid: string[]): string {
+  if (!avoid.length) return text
+  let out = text
+  for (const a of avoid) {
+    const an = a.trim()
+    if (an.length < 2) continue
+    const re = new RegExp(an.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi')
+    out = out.replace(re, '…')
+  }
+  return out.replace(/\s{2,}/g, ' ').replace(/\s+([,.])/g, '$1').trim()
+}
+
+function cardAvoidFree(card: RecipeCard, avoid: string[]): RecipeCard {
+  if (!avoid.length) return card
+  return {
+    ...card,
+    title: scrubText(card.title, avoid),
+    summary: scrubText(card.summary, avoid),
+    ingredients: filterAvoid(card.ingredients, avoid),
+    shoppingList: filterAvoid(card.shoppingList, avoid),
+    steps: card.steps.map((s) => scrubText(s, avoid)),
+  }
+}
+
 function hasAny(pool: string[], needles: string[]): boolean {
   const p = pool.map(norm)
   return needles.some((n) => p.some((x) => x.includes(norm(n)) || norm(n).includes(x)))
@@ -300,6 +339,99 @@ const TEMPLATES: Template[] = [
       'Assemble: rice, protein, pickle, drizzle of soy-mayo. Eat immediately.',
     ],
   },
+  // —— Extra Australian variety ——
+  {
+    id: 'au-mince',
+    culture: 'australian',
+    title: 'Aussie mince & veg pasta bake',
+    intents: ['everyday', 'substantial'],
+    prefer: ['mince', 'beef', 'pasta', 'tomato', 'cheese', 'onion', 'carrot'],
+    extras: ['beef mince', 'pasta', 'tinned tomatoes', 'onion', 'carrot', 'cheese'],
+    summary: (d, intent) =>
+      `Family-style mince pasta bake from fridge and cupboard staples.${intent === 'lighter' ? ' Stretch with extra veg.' : ''}${dietarySuffix(d)}`,
+    steps: () => [
+      'Brown mince with onion and grated carrot. Add tomatoes; simmer.',
+      'Boil pasta; combine with sauce in a baking dish. Top with cheese.',
+      'Bake until bubbling. Rest a few minutes before serving.',
+    ],
+  },
+  {
+    id: 'au-fritters',
+    culture: 'australian',
+    title: 'Corn & zucchini fritters',
+    intents: ['lighter', 'everyday'],
+    prefer: ['corn', 'zucchini', 'egg', 'flour', 'onion', 'yoghurt'],
+    extras: ['corn kernels', 'zucchini', 'eggs', 'self-raising flour', 'yoghurt or relish'],
+    summary: (d) =>
+      `Quick skillet fritters — great for leftover veg and a light plate.${dietarySuffix(d)}`,
+    steps: () => [
+      'Grate zucchini; squeeze out moisture. Mix with corn, egg, flour, and seasoning.',
+      'Spoon into a hot oiled pan; flatten and cook until golden both sides.',
+      'Serve with yoghurt, relish, or a simple salad.',
+    ],
+  },
+  // —— Extra Filipino variety ——
+  {
+    id: 'ph-torta',
+    culture: 'filipino',
+    title: 'Tortang gulay (veg omelette)',
+    intents: ['lighter', 'everyday'],
+    prefer: ['egg', 'onion', 'carrot', 'potato', 'beans', 'cabbage', 'garlic'],
+    extras: ['eggs', 'onion', 'garlic', 'mixed leftover veg', 'oil', 'rice'],
+    summary: (d) =>
+      `Vegetable omelette energy — stretch eggs with whatever greens or root veg you confirmed.${dietarySuffix(d)}`,
+    steps: () => [
+      'Sauté onion, garlic, and chopped veg until soft.',
+      'Beat eggs with a pinch of salt; pour over veg and cook gently.',
+      'Flip or finish under a lid. Serve with rice and a splash of soy if you like.',
+    ],
+  },
+  {
+    id: 'ph-lugaw',
+    culture: 'filipino',
+    title: 'Lugaw-style ginger rice porridge',
+    intents: ['lighter', 'everyday'],
+    prefer: ['rice', 'ginger', 'garlic', 'onion', 'chicken', 'egg', 'spring onion'],
+    extras: ['rice', 'ginger', 'garlic', 'onion', 'stock or water', 'egg', 'spring onion'],
+    summary: (d) =>
+      `Gentle rice porridge with ginger — lighter comfort when you want something soft.${dietarySuffix(d)}`,
+    steps: () => [
+      'Sauté ginger, garlic, and onion. Add rice and plenty of water or stock.',
+      'Simmer, stirring, until porridge-soft. Shred in leftover protein if you have it.',
+      'Finish with spring onion and a soft egg if available.',
+    ],
+  },
+  // —— Extra fusion variety ——
+  {
+    id: 'fx-pancit',
+    culture: 'fusion',
+    title: 'Pancit-style noodle toss',
+    intents: ['everyday', 'substantial'],
+    prefer: ['noodles', 'cabbage', 'carrot', 'chicken', 'soy', 'garlic', 'onion'],
+    extras: ['noodles', 'cabbage', 'carrot', 'garlic', 'soy sauce', 'lemon or calamansi', 'oil'],
+    summary: (d, intent) =>
+      `Filipino pancit vibes with Aussie fridge veg — fast noodle toss.${intent === 'lighter' ? ' Extra cabbage, lighter protein.' : ''}${dietarySuffix(d)}`,
+    steps: () => [
+      'Cook noodles; drain. Sauté garlic and onion; add shredded veg and protein.',
+      'Toss noodles through with soy and a squeeze of lemon or calamansi.',
+      'Serve hot with extra citrus on the side.',
+    ],
+  },
+  {
+    id: 'fx-sisig',
+    culture: 'fusion',
+    title: 'Sisig-inspired chop salad',
+    intents: ['everyday', 'lighter'],
+    prefer: ['pork', 'chicken', 'onion', 'lemon', 'chilli', 'egg', 'lettuce'],
+    extras: ['leftover chopped protein', 'onion', 'lemon or calamansi', 'chilli', 'lettuce or cabbage', 'egg'],
+    summary: (d) =>
+      `Chopped savoury protein salad with citrus heat — Aussie grill leftovers, Filipino punch.${dietarySuffix(d)}`,
+    steps: () => [
+      'Chop leftover protein small. Mix with onion, chilli, and lots of lemon.',
+      'Warm briefly in a pan if you like; season with soy or salt.',
+      'Pile onto lettuce or cabbage. Top with a fried egg if you have one.',
+    ],
+  },
 ]
 
 function scoreTemplate(
@@ -321,6 +453,7 @@ function scoreTemplate(
   // Penalise templates whose core extras are all avoided
   const usableExtras = filterAvoid(t.extras, opts.avoid)
   if (usableExtras.length < 2) score -= 8
+  if (conflictsAvoid(t, opts.avoid)) score -= 100
   return score
 }
 
@@ -360,6 +493,7 @@ export function generateRecipes(opts: {
   const time = intentTiming(opts.recipeIntent, opts.timing)
 
   const ranked = [...TEMPLATES]
+    .filter((t) => !conflictsAvoid(t, avoid))
     .map((t) => ({
       t,
       score: scoreTemplate(t, {
@@ -369,6 +503,7 @@ export function generateRecipes(opts: {
         avoid,
       }),
     }))
+    .filter((r) => r.score > -50)
     .sort((a, b) => b.score - a.score)
 
   const picked: Template[] = []
@@ -412,9 +547,9 @@ export function generateRecipes(opts: {
       ),
     ].slice(0, 8)
 
-    let displayIngs = withExtras
+    let displayIngs = filterAvoid(withExtras, avoid)
     const diet = opts.dietary.toLowerCase()
-    if (diet.includes('no pork')) {
+    if (diet.includes('no pork') || isAvoided('pork', avoid)) {
       displayIngs = displayIngs.filter((i) => !/pork|bacon|ham/i.test(i))
     }
     if (diet.includes('vegetarian') || diet.includes('vegan')) {
@@ -425,8 +560,9 @@ export function generateRecipes(opts: {
     }
 
     const shop = shoppingGaps(t.extras, confirmed, avoid)
+    const safeExtras = filterAvoid(t.extras, avoid)
 
-    return {
+    const card: RecipeCard = {
       id: `${t.id}-${idx}`,
       title: t.title,
       culture: t.culture,
@@ -434,12 +570,13 @@ export function generateRecipes(opts: {
       timeMins: time,
       servings: opts.recipeIntent === 'substantial' ? 4 : 2,
       summary: t.summary(opts.dietary, opts.recipeIntent),
-      ingredients: displayIngs.length >= 2 ? displayIngs : filterAvoid(t.extras, avoid).slice(0, 6),
+      ingredients: displayIngs.length >= 2 ? displayIngs : safeExtras.slice(0, 6),
       steps: t.steps(displayIngs, opts.recipeIntent),
       shoppingList: shop,
       tags: [opts.recipeIntent, t.culture, opts.timing + 'min'],
       disclaimer: DISCLAIMER,
     }
+    return cardAvoidFree(card, avoid)
   })
 }
 

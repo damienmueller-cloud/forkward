@@ -53,21 +53,18 @@ export function Home() {
 
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -inset-3 rotate-3 rounded-3xl bg-violet" />
-            <div className="relative -rotate-2 overflow-hidden rounded-3xl border-4 border-cream bg-coral p-6 shadow-2xl">
-              <div className="space-y-4">
-                <div className="flex gap-3">
-                  <div className="h-16 flex-1 rounded-xl bg-cream/90" />
-                  <div className="h-16 flex-1 rounded-xl bg-lime" />
-                </div>
-                <div className="h-2 rounded bg-navy/80" />
-                <div className="flex gap-3">
-                  <div className="h-20 flex-1 rounded-xl bg-violet" />
-                  <div className="h-20 flex-1 rounded-xl bg-cream/80" />
-                  <div className="h-20 w-16 rounded-xl bg-navy" />
-                </div>
-                <div className="h-2 rounded bg-navy/80" />
-                <p className="text-center font-display text-sm text-cream">
-                  Pantry Lens
+            <div className="relative -rotate-2 overflow-hidden rounded-3xl border-4 border-cream shadow-2xl">
+              <img
+                src={`${import.meta.env.BASE_URL}pantry-hero.png`}
+                alt="Pantry Lens — kitchen photos become practical recipes"
+                className="aspect-[4/5] w-full object-cover"
+                width={480}
+                height={600}
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent p-5">
+                <p className="font-display text-sm text-lime">Pantry Lens</p>
+                <p className="mt-1 text-xs text-cream/80">
+                  Confirm what you see · three recipe cards
                 </p>
               </div>
             </div>
@@ -92,6 +89,15 @@ export function Home() {
             not guess hidden items, quantities, expiry dates, allergens, food
             safety, or nutrition facts.
           </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
+            <img
+              src={`${import.meta.env.BASE_URL}pantry-upload-section.png`}
+              alt="Pantry Lens upload — fridge, freezer, pantry, cupboard, or bench"
+              className="max-h-64 w-full object-cover object-top sm:max-h-72"
+              width={960}
+              height={360}
+            />
+          </div>
           <ol className="mt-10 grid gap-5 sm:grid-cols-3">
             <JourneyStep
               n="01"

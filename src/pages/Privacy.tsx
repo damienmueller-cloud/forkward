@@ -33,7 +33,14 @@ export function Privacy() {
             list, confirmed ingredient chips) may be saved under{' '}
             <code>forkward.pantry-context.v1</code>. Use{' '}
             <strong>Forget pantry context</strong> on Pantry Lens to wipe them
-            if you shared a device.
+            if you shared a device. Forget clears prefs and chips only —
+            photos were never retained in that store.
+          </li>
+          <li>
+            <strong>HEIC / HEIF:</strong> iPhone photos are accepted. Where the
+            browser cannot preview HEIC, Forkward tries an in-browser convert to
+            JPEG. If that fails, export or share as JPG/PNG from Photos and try
+            again — no upload to a Forkward server either way.
           </li>
         </ul>
 

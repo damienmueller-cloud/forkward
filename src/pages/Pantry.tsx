@@ -216,42 +216,53 @@ export function Pantry() {
   return (
     <div className="bg-cream">
       <section className="bg-navy text-cream">
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-          <p className="eyebrow flex items-center gap-2 text-coral">
-            <span className="h-2 w-2 rounded-full bg-lime" />
-            Pantry Lens
-          </p>
-          <h1 className="font-display mt-3 text-3xl sm:text-4xl">
-            Photos → confirmed ingredients →{' '}
-            <span className="text-lime">recipes</span>
-          </h1>
-          <p className="mt-3 text-sm text-cream/75 leading-relaxed">
-            Up to four kitchen views. Private by default. You confirm what the
-            starter list shows before any recipes are built — we will not guess
-            hidden items.
-          </p>
-          <ol className="mt-6 flex flex-wrap gap-2 text-xs font-bold uppercase tracking-wide">
-            {(
-              [
-                'Upload',
-                'Privacy',
-                'Ingredients',
-                'Prefs',
-                'Recipes',
-              ] as const
-            ).map((label, i) => (
-              <li
-                key={label}
-                className={`rounded-full px-3 py-1 ${
-                  i <= stepIndex
-                    ? 'bg-lime text-navy'
-                    : 'bg-white/10 text-cream/60'
-                }`}
-              >
-                {i + 1}. {label}
-              </li>
-            ))}
-          </ol>
+        <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p className="eyebrow flex items-center gap-2 text-coral">
+              <span className="h-2 w-2 rounded-full bg-lime" />
+              Pantry Lens
+            </p>
+            <h1 className="font-display mt-3 text-3xl sm:text-4xl">
+              Photos → confirmed ingredients →{' '}
+              <span className="text-lime">recipes</span>
+            </h1>
+            <p className="mt-3 text-sm text-cream/75 leading-relaxed">
+              Up to four kitchen views. Private by default. You confirm what the
+              starter list shows before any recipes are built — we will not guess
+              hidden items.
+            </p>
+            <ol className="mt-6 flex flex-wrap gap-2 text-xs font-bold uppercase tracking-wide">
+              {(
+                [
+                  'Upload',
+                  'Privacy',
+                  'Ingredients',
+                  'Prefs',
+                  'Recipes',
+                ] as const
+              ).map((label, i) => (
+                <li
+                  key={label}
+                  className={`rounded-full px-3 py-1 ${
+                    i <= stepIndex
+                      ? 'bg-lime text-navy'
+                      : 'bg-white/10 text-cream/60'
+                  }`}
+                >
+                  {i + 1}. {label}
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="relative mx-auto hidden w-full max-w-xs overflow-hidden rounded-2xl border-2 border-lime/40 shadow-lg lg:block">
+            <img
+              src={`${import.meta.env.BASE_URL}pantry-hero.png`}
+              alt=""
+              className="aspect-[4/5] w-full object-cover"
+              width={320}
+              height={400}
+            />
+          </div>
         </div>
       </section>
 
@@ -277,6 +288,15 @@ export function Pantry() {
               or HEIF · up to ~15 MB each. Photos stay in this session only —
               never written to pantry context.
             </p>
+            <div className="mt-4 overflow-hidden rounded-xl border border-navy/10">
+              <img
+                src={`${import.meta.env.BASE_URL}pantry-upload-section.png`}
+                alt="Example kitchen views for Pantry Lens"
+                className="max-h-40 w-full object-cover object-center"
+                width={720}
+                height={200}
+              />
+            </div>
             <label className="mt-6 flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-violet/40 bg-violet/5 px-4 py-10 transition hover:bg-violet/10">
               <span className="font-display text-lg text-violet">
                 {converting ? 'Converting…' : 'Choose photos'}
