@@ -6,7 +6,8 @@ export function Home() {
       {/* Hero — Forkward brand + Pantry Lens CTA */}
       <section className="relative overflow-hidden bg-navy text-cream">
         <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full border-[18px] border-lime/90 opacity-90" />
-        <div className="pointer-events-none absolute bottom-0 right-0 hidden writing-mode-vertical text-[10px] tracking-[0.35em] text-cream/40 sm:block"
+        <div
+          className="pointer-events-none absolute bottom-0 right-0 hidden text-[10px] tracking-[0.35em] text-cream/40 sm:block"
           style={{ writingMode: 'vertical-rl' }}
         >
           OPEN / COOK / SHARE
@@ -75,6 +76,47 @@ export function Home() {
         <div className="h-3 bg-violet" />
       </section>
 
+      {/* How Pantry Lens works */}
+      <section
+        id="how-it-works"
+        className="border-b border-navy/10 bg-cream-warm"
+        aria-label="How Pantry Lens works"
+      >
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <p className="eyebrow text-violet">The Forkward food path</p>
+          <h2 className="font-display mt-2 text-3xl text-navy sm:text-4xl">
+            How Pantry Lens works
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-navy/70">
+            Privacy-first. Up to four kitchen views · about 15 MB each. We will
+            not guess hidden items, quantities, expiry dates, allergens, food
+            safety, or nutrition facts.
+          </p>
+          <ol className="mt-10 grid gap-5 sm:grid-cols-3">
+            <JourneyStep
+              n="01"
+              title="Photos"
+              body="Photograph the fridge, freezer, pantry, cupboard, or bench (up to four views). JPG, PNG, WebP, or HEIC · ~15 MB each. Photos stay in-session only."
+            />
+            <JourneyStep
+              n="02"
+              title="Confirm"
+              body="Edit a starter ingredient list — confirm what you see. Add avoid-ingredients and culture cues before anything is cooked up."
+            />
+            <JourneyStep
+              n="03"
+              title="Recipes"
+              body="Get three practical Australian, Filipino, or fusion cards around what you confirmed — plus optional shopping-list gaps."
+            />
+          </ol>
+          <div className="mt-8">
+            <Link to="/pantry" className="btn-lime">
+              Open Pantry Lens
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Feature strip */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <p className="eyebrow text-violet">How Forkward helps</p>
@@ -123,6 +165,26 @@ export function Home() {
         </div>
       </section>
     </div>
+  )
+}
+
+function JourneyStep({
+  n,
+  title,
+  body,
+}: {
+  n: string
+  title: string
+  body: string
+}) {
+  return (
+    <li className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+      <span className="font-display text-2xl text-lime drop-shadow-[0_0_0_#101223]">
+        <span className="rounded-lg bg-navy px-2 py-0.5 text-lime">{n}</span>
+      </span>
+      <h3 className="font-display mt-4 text-xl text-navy">{title}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-navy/70">{body}</p>
+    </li>
   )
 }
 

@@ -26,7 +26,14 @@ export function Privacy() {
           </li>
           <li>
             Closing or refreshing the tab clears in-memory photo previews.
-            Remove context from your browser if you shared a device.
+            Photos are never written to localStorage.
+          </li>
+          <li>
+            Optional meal prefs (culture, recipe intent, dietary notes, avoid
+            list, confirmed ingredient chips) may be saved under{' '}
+            <code>forkward.pantry-context.v1</code>. Use{' '}
+            <strong>Forget pantry context</strong> on Pantry Lens to wipe them
+            if you shared a device.
           </li>
         </ul>
 

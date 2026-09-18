@@ -15,7 +15,7 @@ export function Layout() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/" className="flex items-center gap-2.5">
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt=""
               className="h-9 w-9 rounded-full object-cover"
               width={36}
@@ -73,7 +73,7 @@ export function Layout() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="" className="h-8 w-8 rounded-full" />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" className="h-8 w-8 rounded-full" />
               <span className="font-display text-lg">Forkward</span>
             </div>
             <p className="mt-3 text-sm text-cream/70 leading-relaxed">
