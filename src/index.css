@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #101223;
+  --color-navy-deep: #111124;
+  --color-navy-card: #161328;
+  --color-cream: #fffdf9;
+  --color-cream-warm: #fffaf4;
+  --color-warm: #ded3c8;
+  --color-lime: #dcff48;
+  --color-lime-soft: #d9ff3f;
+  --color-violet: #5f3bff;
+  --color-violet-bright: #6239ff;
+  --color-coral: #ff5d7a;
+  --color-coral-warm: #ff8a63;
+  --color-ink: #1a1a19;
+  --font-display: "Archivo Black", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.btn-lime {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-lime);
+  color: var(--color-navy);
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-lime:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(220, 255, 72, 0.35);
+}
+
+.btn-violet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-violet);
+  color: white;
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-violet:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(95, 59, 255, 0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-weight: 600;
+  padding: 0.85rem 1.4rem;
+  transition: background 0.15s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.card-navy {
+  background: var(--color-navy-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+}
+
+.disclaimer {
+  border-left: 3px solid var(--color-coral);
+  background: rgba(255, 93, 122, 0.08);
+  padding: 0.85rem 1rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
