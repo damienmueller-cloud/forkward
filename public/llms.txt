@@ -9,3 +9,17 @@
 - [Swaps](https://damienmueller-cloud.github.io/forkward/swaps): "How much if I swapped X for Y" comparisons for beer, potatoes, chips, rice, and pasta. Educational estimates with clear alcohol disclaimers.
 - [Reflect AI](https://damienmueller-cloud.github.io/forkward/reflect): Standalone studio — mirror photo upload, routine sliders, and a conceptual "after" preview. Educational visualisation, not a medical prediction.
 - [Privacy](https://damienmueller-cloud.github.io/forkward/privacy): Photos stay in-session only, are not uploaded to a Forkward server, and are never written to localStorage. Optional meal prefs stay on the device and can be wiped with "Forget pantry context".
+
+## Guides
+
+- [Guides index](https://damienmueller-cloud.github.io/forkward/guides): Plain-English food guides for Australian kitchens. Educational only, not medical advice.
+- [How to turn pantry photos into meals](https://damienmueller-cloud.github.io/forkward/guides/pantry-photos-to-meals): A practical method for turning what's already in your fridge, freezer and pantry into dinner, using photos, a quick ingredient check and a simple meal formula.
+- [Healthy Aussie swaps that still feel like a treat](https://damienmueller-cloud.github.io/forkward/guides/healthy-aussie-swaps): Simple everyday swaps for classic Australian foods, from the barbie to the servo pie, that keep the flavour and lift the veg, fibre and wholegrains.
+- [Healthier takes on Filipino favourites](https://damienmueller-cloud.github.io/forkward/guides/healthy-filipino-favourites): Keep the flavour of adobo, sinigang, pancit and more while adding vegetables, trimming fat and going easier on salt, with tips that work in an Australian kitchen.
+- [High-protein meals on a budget](https://damienmueller-cloud.github.io/forkward/guides/high-protein-budget-meals): Affordable protein sources available at Australian supermarkets and easy meal ideas built around eggs, legumes, tinned fish, tofu and cheaper cuts.
+- [How to read food labels in Australia](https://damienmueller-cloud.github.io/forkward/guides/reading-food-labels-australia): A plain-English guide to the Nutrition Information Panel, ingredient lists, Health Star Ratings and date marks on Australian food packaging.
+- [Meal prep basics for busy weeks](https://damienmueller-cloud.github.io/forkward/guides/meal-prep-basics): A beginner's approach to meal prep: planning, batch cooking, safe storage and keeping it interesting so the food actually gets eaten.
+- [Practical ways to cut back on added sugar](https://damienmueller-cloud.github.io/forkward/guides/reducing-sugar): Where added sugar hides in Australian diets, how to spot it on labels, and easy swaps for drinks, breakfast and snacks.
+- [Eating out smarter without missing out](https://damienmueller-cloud.github.io/forkward/guides/eating-out-smarter): Simple strategies for cafes, pubs, takeaway and restaurants: what to look for on the menu and how to balance the plate while still enjoying the meal.
+- [Reducing food waste at home](https://damienmueller-cloud.github.io/forkward/guides/reducing-food-waste): Plan, store and use up food better: practical habits that save money and stop good food ending up in the bin.
+- [Healthy lunchbox ideas for school and work](https://damienmueller-cloud.github.io/forkward/guides/healthy-lunchbox-ideas): Easy, balanced lunchbox combinations for kids and adults, built around the five food groups and leftovers.

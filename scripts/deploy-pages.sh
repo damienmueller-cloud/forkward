@@ -5,6 +5,7 @@ npm run build
 cp dist/index.html dist/404.html
 touch dist/.nojekyll
 node scripts/seo-pages.mjs
+node scripts/guides-pages.mjs
 rm -rf /tmp/forkward-pages && mkdir -p /tmp/forkward-pages && cp -a dist/. /tmp/forkward-pages/
 cd /tmp/forkward-pages
 git init -b gh-pages
