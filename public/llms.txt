@@ -1,0 +1,11 @@
+# Forkward
+
+> Forkward is a free, private web app for healthier everyday food choices. It includes Pantry Lens (recipes from kitchen photos), a food and drink swaps program, and Reflect AI, a separate studio for conceptual visual studies. Forkward is educational only — not medical, allergen-safety, or food-safety advice.
+
+## Pages
+
+- [Home](https://damienmueller-cloud.github.io/forkward/): Overview of Forkward, how Pantry Lens works, and an FAQ.
+- [Pantry Lens](https://damienmueller-cloud.github.io/forkward/pantry): Upload up to four fridge, freezer, pantry, cupboard, or bench photos (JPG, PNG, WebP, HEIC). Confirm a starter ingredient list, add avoid-ingredients and culture cues, then get three practical Australian, Filipino, or AU × Filipino fusion recipe cards plus optional shopping-list gaps. Runs in the browser; it does not guess quantities, expiry dates, allergens, or nutrition.
+- [Swaps](https://damienmueller-cloud.github.io/forkward/swaps): "How much if I swapped X for Y" comparisons for beer, potatoes, chips, rice, and pasta. Educational estimates with clear alcohol disclaimers.
+- [Reflect AI](https://damienmueller-cloud.github.io/forkward/reflect): Standalone studio — mirror photo upload, routine sliders, and a conceptual "after" preview. Educational visualisation, not a medical prediction.
+- [Privacy](https://damienmueller-cloud.github.io/forkward/privacy): Photos stay in-session only, are not uploaded to a Forkward server, and are never written to localStorage. Optional meal prefs stay on the device and can be wiped with "Forget pantry context".

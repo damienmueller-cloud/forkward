@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import faq from '../data/faq.json'
 
 export function Home() {
   return (
@@ -169,6 +170,19 @@ export function Home() {
             Open Reflect AI
           </Link>
         </div>
+      </section>
+      {/* FAQ */}
+      <section id="faq" className="mx-auto max-w-6xl px-4 py-14 sm:px-6" aria-label="Frequently asked questions">
+        <p className="eyebrow text-violet">FAQ</p>
+        <h2 className="font-display mt-2 text-3xl text-navy sm:text-4xl">Common questions</h2>
+        <dl className="mt-8 grid gap-5 sm:grid-cols-2">
+          {faq.map((f) => (
+            <div key={f.q} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+              <dt className="font-display text-lg text-navy">{f.q}</dt>
+              <dd className="mt-2 text-sm leading-relaxed text-navy/70">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </div>
   )

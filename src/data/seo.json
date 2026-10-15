@@ -1,0 +1,10 @@
+{
+  "site": "https://damienmueller-cloud.github.io/forkward",
+  "routes": {
+    "/": {"title":"Forkward — Pantry Lens recipes, food swaps & Reflect AI","description":"Forkward is a free, private cooking companion: turn kitchen photos into three Australian or Filipino recipe cards with Pantry Lens, explore food swaps, and try Reflect AI. Not medical advice.","image":"pantry-hero.png"},
+    "/pantry": {"title":"Pantry Lens — recipes from your fridge & pantry photos | Forkward","description":"Upload up to four fridge, freezer, pantry, cupboard or bench photos, confirm the ingredients, and get three practical Australian, Filipino or fusion recipe cards. Photos are not saved.","image":"pantry-upload-section.png"},
+    "/reflect": {"title":"Reflect AI — conceptual before/after visual studies | Forkward","description":"Reflect AI is a standalone studio for conceptual before/after visual studies from a mirror photo and routine sliders. Educational visualisation only — not a medical prediction.","image":"logo.png"},
+    "/swaps": {"title":"Food & drink swaps — how much if I swapped X for Y? | Forkward","description":"Compare everyday swaps for beer, potatoes, chips, rice and pasta with educational estimates and clear alcohol disclaimers. Not medical advice.","image":"logo.png"},
+    "/privacy": {"title":"Privacy — how Forkward handles your photos | Forkward","description":"Forkward keeps photos in-session only: not uploaded to a Forkward server, never written to localStorage. Optional meal prefs stay on your device and can be forgotten anytime.","image":"logo.png"}
+  }
+}

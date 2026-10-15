@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
+import { useSeo } from '../lib/useSeo'
 
 const nav = [
   { to: '/', label: 'Home', end: true },
@@ -9,6 +10,7 @@ const nav = [
 ]
 
 export function Layout() {
+  useSeo()
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-navy/10 bg-cream/90 backdrop-blur-md">

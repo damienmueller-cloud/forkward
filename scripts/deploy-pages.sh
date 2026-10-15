@@ -4,10 +4,7 @@ cd "$(dirname "$0")/.."
 npm run build
 cp dist/index.html dist/404.html
 touch dist/.nojekyll
-for r in pantry reflect swaps privacy; do
-  mkdir -p "dist/$r"
-  cp dist/index.html "dist/$r/index.html"
-done
+node scripts/seo-pages.mjs
 rm -rf /tmp/forkward-pages && mkdir -p /tmp/forkward-pages && cp -a dist/. /tmp/forkward-pages/
 cd /tmp/forkward-pages
 git init -b gh-pages
