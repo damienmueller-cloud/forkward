@@ -20,7 +20,7 @@ export function useSeo() {
     const routes = seo.routes as Record<string, Meta>
     const path = pathname.replace(/\/+$/, '') || '/'
     const m = routes[path] ?? routes['/']
-    const url = `${seo.site}${path === '/' ? '/' : path}`
+    const url = `${seo.site}${path === '/' ? '/' : path + '/'}`
     document.title = m.title
     setMeta('name', 'description', m.description)
     setMeta('property', 'og:title', m.title)

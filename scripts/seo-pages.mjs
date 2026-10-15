@@ -10,7 +10,7 @@ const website = { '@type': 'WebSite', '@id': `${site}/#website`, name: 'Forkward
 const app = { '@type': 'WebApplication', '@id': `${site}/#app`, name: 'Forkward', url: `${site}/`, applicationCategory: 'HealthApplication', applicationSubCategory: 'Food & recipes', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' }, description: seo.routes['/'].description, publisher: { '@id': `${site}/#org` } }
 const faqLd = { '@type': 'FAQPage', '@id': `${site}/#faq`, mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
 for (const [path, m] of Object.entries(seo.routes)) {
-  const url = path === '/' ? `${site}/` : `${site}${path}`
+  const url = path === '/' ? `${site}/` : `${site}${path}/`
   const img = `${site}/${m.image}`
   const graph = [website, org, app, ...(path === '/' ? [faqLd] : [])]
   const head = [
