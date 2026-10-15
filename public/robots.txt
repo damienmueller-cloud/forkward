@@ -16,4 +16,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://damienmueller-cloud.github.io/forkward/sitemap.xml
+Sitemap: https://forkward.com.au/sitemap.xml

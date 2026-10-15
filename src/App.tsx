@@ -9,7 +9,7 @@ import { Swaps } from './pages/Swaps'
 
 export default function App() {
   return (
-    <BrowserRouter basename="/forkward">
+    <BrowserRouter basename="/">
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />

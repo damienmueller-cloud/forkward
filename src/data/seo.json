@@ -1,5 +1,5 @@
 {
-  "site": "https://damienmueller-cloud.github.io/forkward",
+  "site": "https://forkward.com.au",
   "routes": {
     "/": {"title":"Forkward — Pantry Lens recipes, food swaps & Reflect AI","description":"Forkward is a free, private cooking companion: turn kitchen photos into three Australian or Filipino recipe cards with Pantry Lens, explore food swaps, and try Reflect AI. Not medical advice.","image":"pantry-hero.png"},
     "/pantry": {"title":"Pantry Lens — recipes from your fridge & pantry photos | Forkward","description":"Upload up to four fridge, freezer, pantry, cupboard or bench photos, confirm the ingredients, and get three practical Australian, Filipino or fusion recipe cards. Photos are not saved.","image":"pantry-upload-section.png"},

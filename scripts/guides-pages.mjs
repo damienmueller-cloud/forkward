@@ -1,7 +1,7 @@
 // Post-build: static index.html per guide route with meta + Article JSON-LD (GitHub Pages deep links).
 import fs from 'node:fs'
 const { guides, updated } = JSON.parse(fs.readFileSync('src/data/guides.json', 'utf8'))
-const site = 'https://damienmueller-cloud.github.io/forkward'
+const site = 'https://forkward.com.au'
 const base = fs.readFileSync('dist/index.html', 'utf8')
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 const strip = (h) => h
@@ -11,7 +11,7 @@ const strip = (h) => h
   .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '')
 const org = { '@type': 'Organization', '@id': `${site}/#org`, name: 'Forkward', url: `${site}/`, logo: `${site}/logo.png` }
 function page(path, title, description, ld) {
-  const url = `${site}${path}`
+  const url = `${site}${path.endsWith("/") ? path : path + "/"}`
   const head = [
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(description)}" />`,
@@ -30,13 +30,13 @@ function page(path, title, description, ld) {
   fs.writeFileSync(out, strip(base).replace('</head>', `    ${head}\n  </head>`))
 }
 page('/guides', 'Healthy eating guides | Forkward', 'Practical, plain-English guides for cooking and eating well in Australia. Not medical advice.', {
-  '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Forkward guides', url: `${site}/guides`, inLanguage: 'en-AU',
-  hasPart: guides.map((g) => ({ '@type': 'Article', headline: g.title, url: `${site}/guides/${g.slug}` })),
+  '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Forkward guides', url: `${site}/guides/`, inLanguage: 'en-AU',
+  hasPart: guides.map((g) => ({ '@type': 'Article', headline: g.title, url: `${site}/guides/${g.slug}/` })),
 })
 for (const g of guides) {
   page(`/guides/${g.slug}`, `${g.title} | Forkward`, g.description, {
     '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.description,
-    url: `${site}/guides/${g.slug}`, mainEntityOfPage: `${site}/guides/${g.slug}`, inLanguage: 'en-AU',
+    url: `${site}/guides/${g.slug}/`, mainEntityOfPage: `${site}/guides/${g.slug}/`, inLanguage: 'en-AU',
     datePublished: updated, dateModified: updated, image: `${site}/logo.png`, author: org, publisher: org,
   })
 }
