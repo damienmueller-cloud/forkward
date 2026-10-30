@@ -1,0 +1,28 @@
+# Forkward
+
+> Forkward is a free, private web app for healthier everyday food choices. It includes Pantry Lens (an AI vision model lists the ingredients in a kitchen photo and suggests healthy recipes; users can edit the list), a food and drink swaps program, and Reflect AI, a separate studio for conceptual visual studies. Forkward is educational only — not medical, allergen-safety, or food-safety advice.
+
+## Pages
+
+- [Home](https://forkward.com.au/): Overview of Forkward, how Pantry Lens works, and an FAQ.
+- [Pantry Lens](https://forkward.com.au/pantry/): Upload up to four fridge, freezer, pantry, cupboard, or bench photos (JPG, PNG, WebP, HEIC). An AI vision model lists the ingredients visible in the first photo and suggests 1–3 healthy, weight-loss-friendly recipes straight away; users can edit the list and regenerate. The AI can make mistakes. If recognition is unavailable, users can type or confirm ingredients and get offline Australian, Filipino, or fusion recipe cards. It does not guess quantities, expiry dates, allergens, or nutrition.
+- [Swaps](https://forkward.com.au/swaps/): "How much if I swapped X for Y" comparisons for beer, potatoes, chips, rice, and pasta. Educational estimates with clear alcohol disclaimers.
+- [Reflect AI](https://forkward.com.au/reflect/): Standalone studio — mirror photo upload, routine sliders, and a conceptual "after" preview. Educational visualisation, not a medical prediction.
+- [Privacy](https://forkward.com.au/privacy/): Forkward does not store photos: the first photo is resized and sent to an AI vision provider only to identify ingredients and suggest recipes. Photos are never written to localStorage. Optional meal prefs stay on the device and can be wiped with "Forget pantry context".
+
+## Guides
+
+- [Guides index](https://forkward.com.au/guides/): Plain-English food guides for Australian kitchens. Educational only, not medical advice.
+- [How to turn pantry photos into meals](https://forkward.com.au/guides/pantry-photos-to-meals/): A practical method for turning what's already in your fridge, freezer and pantry into dinner, using photos, a quick ingredient check and a simple meal formula.
+- [Healthy Aussie swaps that still feel like a treat](https://forkward.com.au/guides/healthy-aussie-swaps/): Simple everyday swaps for classic Australian foods, from the barbie to the servo pie, that keep the flavour and lift the veg, fibre and wholegrains.
+- [Healthier takes on Filipino favourites](https://forkward.com.au/guides/healthy-filipino-favourites/): Keep the flavour of adobo, sinigang, pancit and more while adding vegetables, trimming fat and going easier on salt, with tips that work in an Australian kitchen.
+- [High-protein meals on a budget](https://forkward.com.au/guides/high-protein-budget-meals/): Affordable protein sources available at Australian supermarkets and easy meal ideas built around eggs, legumes, tinned fish, tofu and cheaper cuts.
+- [How to read food labels in Australia](https://forkward.com.au/guides/reading-food-labels-australia/): A plain-English guide to the Nutrition Information Panel, ingredient lists, Health Star Ratings and date marks on Australian food packaging.
+- [Meal prep basics for busy weeks](https://forkward.com.au/guides/meal-prep-basics/): A beginner's approach to meal prep: planning, batch cooking, safe storage and keeping it interesting so the food actually gets eaten.
+- [Practical ways to cut back on added sugar](https://forkward.com.au/guides/reducing-sugar/): Where added sugar hides in Australian diets, how to spot it on labels, and easy swaps for drinks, breakfast and snacks.
+- [Eating out smarter without missing out](https://forkward.com.au/guides/eating-out-smarter/): Simple strategies for cafes, pubs, takeaway and restaurants: what to look for on the menu and how to balance the plate while still enjoying the meal.
+- [Reducing food waste at home](https://forkward.com.au/guides/reducing-food-waste/): Plan, store and use up food better: practical habits that save money and stop good food ending up in the bin.
+- [Healthy lunchbox ideas for school and work](https://forkward.com.au/guides/healthy-lunchbox-ideas/): Easy, balanced lunchbox combinations for kids and adults, built around the five food groups and leftovers.
+- [Portion sizes without scales: a hand-and-plate guide](https://forkward.com.au/guides/portion-sizes-without-scales/): A simple way to estimate sensible portions using your hand and a standard dinner plate, no food scales or calorie counting required. General information, not medical advice.
+- [How to plan a week of meals on a budget](https://forkward.com.au/guides/weekly-meal-plan-on-a-budget/): A step-by-step method for planning a week of dinners in Australia that uses what you already have, shares ingredients across meals and keeps the shopping list short.
+- [Quick healthy breakfast ideas for busy mornings](https://forkward.com.au/guides/healthy-breakfast-ideas/): Practical, quick breakfast ideas with protein and fibre, using everyday Australian supermarket ingredients, plus tips for preparing ahead.
