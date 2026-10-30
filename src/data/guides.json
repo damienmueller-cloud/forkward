@@ -24,7 +24,7 @@
         {
           "h": "Confirm the list before you cook",
           "p": [
-            "Pantry Lens doesn't identify food from your photos for you; they're a memory aid. Use them to write or confirm your own ingredient list, delete anything that's used up and add what's hiding behind the milk. You know what's actually in the jar."
+            "Pantry Lens now uses an AI vision model to list the ingredients it can see in your photo and suggest recipes straight away. It's a fast starting point, not the final word: the AI can miss items, mistake one food for another, or misread a label. Delete anything wrong, add what's hiding behind the milk, then update the recipes. You know what's really in your kitchen."
           ]
         },
         {
@@ -45,7 +45,7 @@
         {
           "h": "Try it",
           "p": [
-            "Pantry Lens lets you add up to four kitchen photos as a reference, list or confirm your ingredients yourself, and suggests three Australian, Filipino or fusion recipe cards. It doesn't guess quantities, expiry dates, allergens or nutrition."
+            "Pantry Lens lets you upload a fridge, pantry or bench photo, has AI spot the visible ingredients, and shows healthy recipe ideas straight away. You can edit the list and regenerate, or type ingredients yourself if the AI is unavailable. It doesn't guess quantities, expiry dates, allergens or nutrition, and the AI can make mistakes, so always check before you cook."
           ]
         }
       ]

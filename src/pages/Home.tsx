@@ -26,8 +26,9 @@ export function Home() {
             <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/80 sm:text-lg">
               Turn up to four fridge, freezer, pantry, cupboard, or bench photos
               into three practical recipes made around what you already have.
-              First, you confirm the ingredients — because a photo should never
-              guess for you.
+              An AI vision model spots the ingredients and suggests healthy
+              recipes on the spot — you can edit the list, because AI can make
+              mistakes.
             </p>
             <ul className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
               <li className="flex items-center gap-2">
@@ -103,12 +104,12 @@ export function Home() {
             <JourneyStep
               n="01"
               title="Photos"
-              body="Photograph the fridge, freezer, pantry, cupboard, or bench (up to four views). JPG, PNG, WebP, or HEIC · ~15 MB each. Photos stay in-session only."
+              body="Photograph the fridge, freezer, pantry, cupboard, or bench (up to four views). JPG, PNG, WebP, or HEIC · ~15 MB each. Your first photo is analysed by AI and not stored by Forkward."
             />
             <JourneyStep
               n="02"
               title="Confirm"
-              body="Edit a starter ingredient list — confirm what you see. Add avoid-ingredients and culture cues before anything is cooked up."
+              body="AI lists the ingredients it can see — edit anything it got wrong. Add avoid-ingredients and culture cues before anything is cooked up."
             />
             <JourneyStep
               n="03"

@@ -1,14 +1,14 @@
 # Forkward
 
-> Forkward is a free, private web app for healthier everyday food choices. It includes Pantry Lens (recipe ideas from an ingredient list you enter or confirm yourself), a food and drink swaps program, and Reflect AI, a separate studio for conceptual visual studies. Forkward is educational only — not medical, allergen-safety, or food-safety advice.
+> Forkward is a free, private web app for healthier everyday food choices. It includes Pantry Lens (an AI vision model lists the ingredients in a kitchen photo and suggests healthy recipes; users can edit the list), a food and drink swaps program, and Reflect AI, a separate studio for conceptual visual studies. Forkward is educational only — not medical, allergen-safety, or food-safety advice.
 
 ## Pages
 
 - [Home](https://forkward.com.au/): Overview of Forkward, how Pantry Lens works, and an FAQ.
-- [Pantry Lens](https://forkward.com.au/pantry/): Upload up to four fridge, freezer, pantry, cupboard, or bench photos (JPG, PNG, WebP, HEIC). List or confirm your ingredients yourself (no automatic image recognition), add avoid-ingredients and culture cues, then get three practical Australian, Filipino, or AU × Filipino fusion recipe cards plus optional shopping-list gaps. Runs in the browser; it does not guess quantities, expiry dates, allergens, or nutrition.
+- [Pantry Lens](https://forkward.com.au/pantry/): Upload up to four fridge, freezer, pantry, cupboard, or bench photos (JPG, PNG, WebP, HEIC). An AI vision model lists the ingredients visible in the first photo and suggests 1–3 healthy, weight-loss-friendly recipes straight away; users can edit the list and regenerate. The AI can make mistakes. If recognition is unavailable, users can type or confirm ingredients and get offline Australian, Filipino, or fusion recipe cards. It does not guess quantities, expiry dates, allergens, or nutrition.
 - [Swaps](https://forkward.com.au/swaps/): "How much if I swapped X for Y" comparisons for beer, potatoes, chips, rice, and pasta. Educational estimates with clear alcohol disclaimers.
 - [Reflect AI](https://forkward.com.au/reflect/): Standalone studio — mirror photo upload, routine sliders, and a conceptual "after" preview. Educational visualisation, not a medical prediction.
-- [Privacy](https://forkward.com.au/privacy/): Photos stay in-session only, are not uploaded to a Forkward server, and are never written to localStorage. Optional meal prefs stay on the device and can be wiped with "Forget pantry context".
+- [Privacy](https://forkward.com.au/privacy/): Forkward does not store photos: the first photo is resized and sent to an AI vision provider only to identify ingredients and suggest recipes. Photos are never written to localStorage. Optional meal prefs stay on the device and can be wiped with "Forget pantry context".
 
 ## Guides
 

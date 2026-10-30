@@ -21,6 +21,7 @@ import {
   loadPantryContext,
   savePantryContext,
 } from '../lib/pantryContext'
+import { analysePantryPhoto, type AiRecipe } from '../lib/pantryVision'
 
 type Step = 'upload' | 'privacy' | 'ingredients' | 'prefs' | 'recipes'
 
@@ -55,6 +56,9 @@ export function Pantry() {
   const [dietary, setDietary] = useState(saved?.dietary ?? '')
   const [timing, setTiming] = useState(saved?.timing ?? '30')
   const [recipes, setRecipes] = useState<RecipeCard[]>([])
+  const [aiRecipes, setAiRecipes] = useState<AiRecipe[]>([])
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiError, setAiError] = useState<string | null>(null)
   const [contextBanner, setContextBanner] = useState(
     saved ? 'Restored pantry prefs from this browser (photos were never saved).' : null,
   )
@@ -130,6 +134,33 @@ export function Pantry() {
     })
   }
 
+  async function runAi(opts: { useEdited?: boolean; regenerate?: boolean } = {}) {
+    if (photos.length === 0) return
+    setAiLoading(true)
+    setAiError(null)
+    try {
+      const res = await analysePantryPhoto(photos[0].file, {
+        ingredients: opts.useEdited ? ingredients : undefined,
+        avoid: [...avoidList, ...(opts.regenerate ? aiRecipes.map((r) => `recipe: ${r.title}`) : [])],
+        prefs: dietary || undefined,
+      })
+      if (!opts.useEdited && res.ingredients.length) setIngredients(res.ingredients.slice(0, 24))
+      if (res.recipes.length === 0) {
+        setAiError('No food spotted in that photo. Add ingredients below and continue manually.')
+        setStep('ingredients')
+        return
+      }
+      setAiRecipes(res.recipes)
+      setRecipes([])
+      setStep('recipes')
+    } catch {
+      setAiError('Photo recognition is unavailable right now. Confirm or type your ingredients below to get recipes.')
+      setStep('ingredients')
+    } finally {
+      setAiLoading(false)
+    }
+  }
+
   function confirmPrivacy() {
     if (!privacyOk || photos.length === 0) return
     const locs = photos.map((p) => p.location)
@@ -142,6 +173,7 @@ export function Pantry() {
     setIngredients(base)
     setContextBanner(null)
     setStep('ingredients')
+    void runAi()
   }
 
   function addChip(
@@ -177,6 +209,7 @@ export function Pantry() {
       avoidIngredients: avoidList,
     })
     setRecipes(cards)
+    setAiRecipes([])
     setStep('recipes')
   }
 
@@ -198,6 +231,8 @@ export function Pantry() {
     }
     setPrivacyOk(false)
     setRecipes([])
+    setAiRecipes([])
+    setAiError(null)
     setUploadError(null)
     setHeicGuidance(null)
     setStep('upload')
@@ -223,13 +258,14 @@ export function Pantry() {
               Pantry Lens
             </p>
             <h1 className="font-display mt-3 text-3xl sm:text-4xl">
-              Photos → confirmed ingredients →{' '}
+              Snap your food → AI spots ingredients →{' '}
               <span className="text-lime">recipes</span>
             </h1>
             <p className="mt-3 text-sm text-cream/75 leading-relaxed">
-              Up to four kitchen views. Private by default. You confirm what the
-              starter list shows before any recipes are built — we will not guess
-              hidden items.
+              Upload a photo of your fridge, pantry or bench. An AI vision model
+              lists what it can see and suggests healthy recipes straight away.
+              Edit the list anytime — the AI can make mistakes, and you can always
+              type ingredients yourself.
             </p>
             <ol className="mt-6 flex flex-wrap gap-2 text-xs font-bold uppercase tracking-wide">
               {(
@@ -397,11 +433,13 @@ export function Pantry() {
           <div className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
             <h2 className="font-display text-xl">Privacy confirm</h2>
             <p className="mt-2 text-sm text-navy/70 leading-relaxed">
-              Pantry Lens builds a <strong>starter ingredient list</strong> in
-              your browser from location labels and common AU pantry heuristics —
-              not remote AI vision. Photos are not uploaded to a Forkward server
-              and are not retained after you leave this page. Optional prefs can
-              be saved in localStorage; use Forget anytime.
+              Your first photo is resized in your browser and sent to Forkward's
+              Pantry Lens service, where an AI vision model lists the ingredients
+              it can see and suggests recipes. Forkward does not store the photo;
+              it is passed to the AI provider only to answer this request. If the
+              AI is unavailable, you can still type or confirm ingredients
+              yourself. Optional prefs can be saved in localStorage; use Forget
+              anytime.
             </p>
             <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-xl bg-navy/5 p-4">
               <input
@@ -411,8 +449,8 @@ export function Pantry() {
                 onChange={(e) => setPrivacyOk(e.target.checked)}
               />
               <span className="text-sm font-medium">
-                I understand these photos stay private by default and I will
-                confirm ingredients before recipes are generated.
+                I'm happy for my first photo to be analysed by AI, and I'll check
+                the ingredients and recipes — the AI can make mistakes.
               </span>
             </label>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -429,7 +467,7 @@ export function Pantry() {
                 disabled={!privacyOk}
                 onClick={confirmPrivacy}
               >
-                Draft ingredients
+                Find ingredients &amp; recipes
               </button>
             </div>
           </div>
@@ -437,6 +475,17 @@ export function Pantry() {
 
         {step === 'ingredients' && (
           <div className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+            {aiLoading && (
+              <div role="status" className="mb-4 flex items-center gap-3 rounded-xl bg-violet/10 px-4 py-3 text-sm font-semibold text-violet">
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-violet border-t-transparent" />
+                Looking at your photo and building a recipe…
+              </div>
+            )}
+            {aiError && (
+              <div className="mb-4 rounded-xl border border-coral/40 bg-coral/10 px-4 py-3 text-sm text-navy">
+                {aiError}
+              </div>
+            )}
             <h2 className="font-display text-xl">Confirm ingredients</h2>
             <p className="mt-2 text-sm text-navy/70">
               Starter list — confirm what you see. Remove anything wrong. Add
@@ -510,6 +559,16 @@ export function Pantry() {
               >
                 Meal preferences
               </button>
+              {photos.length > 0 && (
+                <button
+                  type="button"
+                  className="btn-violet"
+                  disabled={!canGenerate || aiLoading}
+                  onClick={() => runAi({ useEdited: true })}
+                >
+                  {aiLoading ? 'Working…' : 'AI recipes from this list'}
+                </button>
+              )}
             </div>
           </div>
         )}
@@ -695,7 +754,80 @@ export function Pantry() {
           </div>
         )}
 
-        {step === 'recipes' && (
+        {step === 'recipes' && aiRecipes.length > 0 && (
+          <div>
+            <div className="mb-4 rounded-2xl border border-navy/10 bg-white p-5 shadow-sm">
+              <h2 className="font-display text-lg">Ingredients spotted in your photo</h2>
+              <p className="mt-1 text-xs text-navy/60">
+                Remove anything wrong or add what was missed, then update.
+              </p>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {ingredients.map((item) => (
+                  <li key={item} className="flex items-center gap-2 rounded-full bg-lime/30 px-3 py-1.5 text-sm font-semibold text-navy">
+                    {item}
+                    <button type="button" className="text-navy/50 hover:text-coral" aria-label={`Remove ${item}`} onClick={() => setIngredients(ingredients.filter((x) => x !== item))}>×</button>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 flex gap-2">
+                <input
+                  value={ingredientDraft}
+                  onChange={(e) => setIngredientDraft(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && addChip(ingredients, setIngredients, ingredientDraft, setIngredientDraft)}
+                  placeholder="Add ingredient"
+                  className="flex-1 rounded-xl border border-navy/15 px-3 py-2 text-sm"
+                />
+                <button type="button" className="btn-violet !py-2" onClick={() => addChip(ingredients, setIngredients, ingredientDraft, setIngredientDraft)}>Add</button>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <button type="button" className="btn-lime" disabled={aiLoading || !canGenerate} onClick={() => runAi({ useEdited: true })}>
+                  Update recipes
+                </button>
+                <button type="button" className="btn-violet" disabled={aiLoading} onClick={() => runAi({ useEdited: true, regenerate: true })}>
+                  {aiLoading ? 'Working…' : 'Regenerate'}
+                </button>
+              </div>
+              {aiLoading && (
+                <p role="status" className="mt-3 text-sm font-semibold text-violet">Building new recipes…</p>
+              )}
+              {aiError && <p className="mt-3 text-sm text-coral">{aiError}</p>}
+            </div>
+            <div className="grid gap-5">
+              {aiRecipes.map((r, i) => (
+                <article key={`${r.title}-${i}`} className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm">
+                  <div className="flex items-center justify-between gap-2 bg-navy px-5 py-3 text-cream">
+                    <h3 className="font-display text-lg">{r.title}</h3>
+                    {r.time && <span className="rounded-full bg-lime px-2.5 py-0.5 text-xs font-bold text-navy">{r.time}</span>}
+                  </div>
+                  <div className="px-5 py-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wide text-navy/50">Ingredients</h4>
+                    <ul className="mt-1 list-inside list-disc text-sm">
+                      {r.ingredients.map((ing, j) => <li key={j}>{ing}</li>)}
+                    </ul>
+                    <h4 className="mt-4 text-xs font-bold uppercase tracking-wide text-navy/50">Steps</h4>
+                    <ol className="mt-1 list-inside list-decimal space-y-1 text-sm">
+                      {r.steps.map((st, j) => <li key={j}>{st}</li>)}
+                    </ol>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="mt-4 text-xs leading-relaxed text-navy/55">
+              AI-generated from your photo — it can misidentify or miss ingredients,
+              so check before cooking. Not medical, nutrition or allergen advice.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <button type="button" className="rounded-full border border-navy/20 px-4 py-2 text-sm font-semibold" onClick={() => setStep('prefs')}>
+                Use offline recipe builder instead
+              </button>
+              <button type="button" className="btn-violet" onClick={() => restart(true)}>
+                Start another Pantry Lens
+              </button>
+            </div>
+          </div>
+        )}
+
+        {step === 'recipes' && aiRecipes.length === 0 && (
           <div>
             <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
               <div>

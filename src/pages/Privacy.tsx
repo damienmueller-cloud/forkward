@@ -17,8 +17,10 @@ export function Privacy() {
         <h2 className="font-display text-xl text-navy">Pantry Lens</h2>
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            Kitchen photos you select stay in the browser session for this MVP.
-            They are not uploaded to a Forkward server.
+            When you agree, your first kitchen photo is resized in your browser
+            and sent to Forkward's Pantry Lens service, which passes it to an AI
+            vision provider to list visible ingredients and suggest recipes.
+            Forkward does not store the photo; it is used only for that request.
           </li>
           <li>
             You confirm (and can edit) draft ingredients before recipes are

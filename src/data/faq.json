@@ -1,6 +1,6 @@
 [
-  {"q":"What is Pantry Lens?","a":"Pantry Lens turns up to four fridge, freezer, pantry, cupboard, or bench photos into three practical recipe cards. You confirm the ingredient list first — a photo should never guess for you."},
+  {"q":"What is Pantry Lens?","a":"Pantry Lens turns up to four fridge, freezer, pantry, cupboard, or bench photos into three practical recipe cards. An AI vision model lists the ingredients it can see and suggests recipes straight away; you can edit the list, because the AI can make mistakes."},
   {"q":"What kind of recipes does Forkward suggest?","a":"Practical Australian, Filipino, or AU × Filipino fusion recipe cards built around the ingredients you confirmed, plus optional shopping-list gaps. Recipes come from templates built into the app and run in your browser, not from remote AI vision."},
-  {"q":"Are my photos saved?","a":"No. Photos stay in-session only: they are not uploaded to a Forkward server, never written to localStorage, and closing or refreshing the tab clears previews. Optional meal prefs can be saved on your device and wiped with Forget pantry context."},
+  {"q":"Are my photos saved?","a":"No. Forkward doesn't store them: your first photo is resized and sent to an AI vision provider only to identify ingredients and suggest recipes, and photos are never written to localStorage, and closing or refreshing the tab clears previews. Optional meal prefs can be saved on your device and wiped with Forget pantry context."},
   {"q":"Is Forkward medical advice?","a":"No. Forkward is educational only — not medical, allergen-safety, or food-safety advice. Reflect AI visual studies are conceptual, not medical predictions. Check labels and speak with a GP about health decisions."}
 ]

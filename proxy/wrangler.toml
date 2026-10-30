@@ -1,0 +1,9 @@
+name = "forkward-pantry-lens"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+[ai]
+binding = "AI"
+[vars]
+XAI_MODEL = "grok-4-fast-non-reasoning"
+CF_MODEL = "@cf/meta/llama-4-scout-17b-16e-instruct"
