@@ -5,6 +5,7 @@ const nav = [
   { to: '/', label: 'Home', end: true },
   { to: '/pantry', label: 'Pantry Lens' },
   { to: '/swaps', label: 'Swaps' },
+  { to: '/guides', label: 'Guides' },
   { to: '/reflect', label: 'Reflect AI' },
   { to: '/privacy', label: 'Privacy' },
 ]
@@ -94,6 +95,11 @@ export function Layout() {
               <li>
                 <Link className="hover:text-lime" to="/swaps">
                   Swaps program
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-lime" to="/guides">
+                  Guides
                 </Link>
               </li>
               <li>

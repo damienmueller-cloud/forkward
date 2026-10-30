@@ -1,17 +1,53 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-30",
   "guides": [
     {
       "slug": "pantry-photos-to-meals",
       "title": "How to turn pantry photos into meals",
       "description": "A practical method for turning what's already in your fridge, freezer and pantry into dinner, using photos, a quick ingredient check and a simple meal formula.",
       "sections": [
-        {"h": "Why start with what you have", "p": ["Cooking from what's already in the house saves money, cuts food waste and skips the 'what's for dinner?' stall. Photos help because they show you things you forget are there: the half-bag of frozen peas, the tin of chickpeas at the back, the spring onions about to wilt."]},
-        {"h": "Take useful photos", "li": ["Open the fridge door fully and shoot shelf by shelf in good light.", "Pull jars and tins forward so labels face the camera.", "Include the freezer and the bench (onions, garlic, fruit bowl).", "Up to four clear photos usually beats ten blurry ones."]},
-        {"h": "Confirm the list before you cook", "p": ["Any photo tool, Forkward's Pantry Lens included, can misread a label or miss something behind the milk. Check the draft ingredient list, delete what's wrong and add what's missing. You know what's actually in the jar; the photo doesn't."]},
-        {"h": "Use a simple meal formula", "li": ["A protein: eggs, tinned fish, legumes, tofu, chicken, mince.", "A carb: rice, pasta, noodles, bread, potatoes, wraps.", "Two or more veg: fresh, frozen or tinned all count.", "A flavour lift: garlic, soy, lemon, chilli, herbs, stock, vinegar."]},
-        {"h": "Use it up in the right order", "p": ["Cook the most perishable things first (leafy greens, herbs, opened dairy, fresh meat), then move to sturdier veg, then frozen and pantry staples. Always check use-by dates and storage yourself; a photo can't tell you if something is still safe to eat."]},
-        {"h": "Try it", "p": ["Pantry Lens takes up to four kitchen photos, lets you confirm the ingredients, and suggests three Australian, Filipino or fusion recipe cards. It doesn't guess quantities, expiry dates, allergens or nutrition."]}
+        {
+          "h": "Why start with what you have",
+          "p": [
+            "Cooking from what's already in the house saves money, cuts food waste and skips the 'what's for dinner?' stall. Photos help because they show you things you forget are there: the half-bag of frozen peas, the tin of chickpeas at the back, the spring onions about to wilt."
+          ]
+        },
+        {
+          "h": "Take useful photos",
+          "li": [
+            "Open the fridge door fully and shoot shelf by shelf in good light.",
+            "Pull jars and tins forward so labels face the camera.",
+            "Include the freezer and the bench (onions, garlic, fruit bowl).",
+            "Up to four clear photos usually beats ten blurry ones."
+          ]
+        },
+        {
+          "h": "Confirm the list before you cook",
+          "p": [
+            "Any photo tool, Forkward's Pantry Lens included, can misread a label or miss something behind the milk. Check the draft ingredient list, delete what's wrong and add what's missing. You know what's actually in the jar; the photo doesn't."
+          ]
+        },
+        {
+          "h": "Use a simple meal formula",
+          "li": [
+            "A protein: eggs, tinned fish, legumes, tofu, chicken, mince.",
+            "A carb: rice, pasta, noodles, bread, potatoes, wraps.",
+            "Two or more veg: fresh, frozen or tinned all count.",
+            "A flavour lift: garlic, soy, lemon, chilli, herbs, stock, vinegar."
+          ]
+        },
+        {
+          "h": "Use it up in the right order",
+          "p": [
+            "Cook the most perishable things first (leafy greens, herbs, opened dairy, fresh meat), then move to sturdier veg, then frozen and pantry staples. Always check use-by dates and storage yourself; a photo can't tell you if something is still safe to eat."
+          ]
+        },
+        {
+          "h": "Try it",
+          "p": [
+            "Pantry Lens takes up to four kitchen photos, lets you confirm the ingredients, and suggests three Australian, Filipino or fusion recipe cards. It doesn't guess quantities, expiry dates, allergens or nutrition."
+          ]
+        }
       ]
     },
     {
@@ -19,12 +55,51 @@
       "title": "Healthy Aussie swaps that still feel like a treat",
       "description": "Simple everyday swaps for classic Australian foods, from the barbie to the servo pie, that keep the flavour and lift the veg, fibre and wholegrains.",
       "sections": [
-        {"h": "Swap, don't ban", "p": ["Small, repeatable swaps tend to stick better than strict rules. The idea is to keep the meals you like and nudge them toward more vegetables, wholegrains and less added salt, sugar and saturated fat, in line with the Australian Dietary Guidelines."]},
-        {"h": "At the barbie", "li": ["Swap some sausages for lean chicken skewers, fish or marinated tofu.", "Use wholemeal bread or rolls instead of white.", "Add a big salad, grilled corn or capsicum alongside.", "Go easy on the sauce bottle; try salsa, mustard or a squeeze of lemon."]},
-        {"h": "Brekky", "li": ["Swap sugary cereal for rolled oats, Weet-Bix-style wholegrain biscuits or untoasted muesli.", "Smashed avo on wholegrain toast instead of a ham-and-cheese croissant.", "Add fruit for sweetness rather than extra sugar or syrup."]},
-        {"h": "Takeaway favourites, made at home", "li": ["Oven-baked chips with the skin on instead of deep-fried.", "Homemade burgers with lean mince, salad and a wholemeal bun.", "Fish wrapped in foil or grilled instead of battered.", "Homemade pizza on a wholemeal base with lots of veg."]},
-        {"h": "Drinks", "li": ["Water, plain mineral water or soda water with lime instead of soft drink.", "If you drink alcohol, try alcohol-free days and mid-strength or zero-alcohol options. Australian guidelines recommend no more than 10 standard drinks a week and no more than 4 on any one day for healthy adults."]},
-        {"h": "Compare swaps", "p": ["Forkward's Swaps page lets you explore 'how much if I swapped X for Y' comparisons for beer, potatoes, chips, rice and pasta as educational estimates."]}
+        {
+          "h": "Swap, don't ban",
+          "p": [
+            "Small, repeatable swaps tend to stick better than strict rules. The idea is to keep the meals you like and nudge them toward more vegetables, wholegrains and less added salt, sugar and saturated fat, in line with the Australian Dietary Guidelines."
+          ]
+        },
+        {
+          "h": "At the barbie",
+          "li": [
+            "Swap some sausages for lean chicken skewers, fish or marinated tofu.",
+            "Use wholemeal bread or rolls instead of white.",
+            "Add a big salad, grilled corn or capsicum alongside.",
+            "Go easy on the sauce bottle; try salsa, mustard or a squeeze of lemon."
+          ]
+        },
+        {
+          "h": "Brekky",
+          "li": [
+            "Swap sugary cereal for rolled oats, Weet-Bix-style wholegrain biscuits or untoasted muesli.",
+            "Smashed avo on wholegrain toast instead of a ham-and-cheese croissant.",
+            "Add fruit for sweetness rather than extra sugar or syrup."
+          ]
+        },
+        {
+          "h": "Takeaway favourites, made at home",
+          "li": [
+            "Oven-baked chips with the skin on instead of deep-fried.",
+            "Homemade burgers with lean mince, salad and a wholemeal bun.",
+            "Fish wrapped in foil or grilled instead of battered.",
+            "Homemade pizza on a wholemeal base with lots of veg."
+          ]
+        },
+        {
+          "h": "Drinks",
+          "li": [
+            "Water, plain mineral water or soda water with lime instead of soft drink.",
+            "If you drink alcohol, try alcohol-free days and mid-strength or zero-alcohol options. Australian guidelines recommend no more than 10 standard drinks a week and no more than 4 on any one day for healthy adults."
+          ]
+        },
+        {
+          "h": "Compare swaps",
+          "p": [
+            "Forkward's Swaps page lets you explore 'how much if I swapped X for Y' comparisons for beer, potatoes, chips, rice and pasta as educational estimates."
+          ]
+        }
       ]
     },
     {
@@ -32,12 +107,50 @@
       "title": "Healthier takes on Filipino favourites",
       "description": "Keep the flavour of adobo, sinigang, pancit and more while adding vegetables, trimming fat and going easier on salt, with tips that work in an Australian kitchen.",
       "sections": [
-        {"h": "Filipino food already has strengths", "p": ["Sour soups like sinigang, vegetable dishes like pinakbet and ginisang monggo (mung bean stew), and plenty of fish and greens are great foundations. Most tweaks are about portion balance, salt and frying, not giving dishes up."]},
-        {"h": "Adobo", "li": ["Use skinless chicken thighs or trim visible fat from pork.", "Skim the fat off the sauce after it cools a little.", "Use reduced-salt soy sauce and lean on vinegar, garlic, bay leaf and pepper for flavour.", "Add vegetables like kangkong (water spinach), green beans or eggplant to the pan."]},
-        {"h": "Sinigang and soups", "li": ["Load up on radish, kangkong, snake beans, okra and tomato.", "Choose fish or prawns, or lean pork cuts.", "Tamarind-based soup mixes can be salty; use less of the packet and add fresh tamarind or lemon for sourness."]},
-        {"h": "Pancit and rice", "li": ["Pile in cabbage, carrot, snow peas and green beans so veg outweighs noodles.", "Try a mix of white and brown rice, or add cauliflower rice to stretch it.", "Keep rice to about a quarter of the plate, with half the plate veg."]},
-        {"h": "Fried favourites", "li": ["Air-fry or oven-bake lumpia instead of deep-frying.", "Have lechon kawali or crispy pata as an occasional treat, alongside atchara (pickled papaya) and lots of greens."]},
-        {"h": "Finding ingredients in Australia", "p": ["Asian and Filipino grocers carry kangkong, calamansi, tamarind and bagoong. Swap in spinach, lime or lemon when you can't find them."]}
+        {
+          "h": "Filipino food already has strengths",
+          "p": [
+            "Sour soups like sinigang, vegetable dishes like pinakbet and ginisang monggo (mung bean stew), and plenty of fish and greens are great foundations. Most tweaks are about portion balance, salt and frying, not giving dishes up."
+          ]
+        },
+        {
+          "h": "Adobo",
+          "li": [
+            "Use skinless chicken thighs or trim visible fat from pork.",
+            "Skim the fat off the sauce after it cools a little.",
+            "Use reduced-salt soy sauce and lean on vinegar, garlic, bay leaf and pepper for flavour.",
+            "Add vegetables like kangkong (water spinach), green beans or eggplant to the pan."
+          ]
+        },
+        {
+          "h": "Sinigang and soups",
+          "li": [
+            "Load up on radish, kangkong, snake beans, okra and tomato.",
+            "Choose fish or prawns, or lean pork cuts.",
+            "Tamarind-based soup mixes can be salty; use less of the packet and add fresh tamarind or lemon for sourness."
+          ]
+        },
+        {
+          "h": "Pancit and rice",
+          "li": [
+            "Pile in cabbage, carrot, snow peas and green beans so veg outweighs noodles.",
+            "Try a mix of white and brown rice, or add cauliflower rice to stretch it.",
+            "Keep rice to about a quarter of the plate, with half the plate veg."
+          ]
+        },
+        {
+          "h": "Fried favourites",
+          "li": [
+            "Air-fry or oven-bake lumpia instead of deep-frying.",
+            "Have lechon kawali or crispy pata as an occasional treat, alongside atchara (pickled papaya) and lots of greens."
+          ]
+        },
+        {
+          "h": "Finding ingredients in Australia",
+          "p": [
+            "Asian and Filipino grocers carry kangkong, calamansi, tamarind and bagoong. Swap in spinach, lime or lemon when you can't find them."
+          ]
+        }
       ]
     },
     {
@@ -45,10 +158,43 @@
       "title": "High-protein meals on a budget",
       "description": "Affordable protein sources available at Australian supermarkets and easy meal ideas built around eggs, legumes, tinned fish, tofu and cheaper cuts.",
       "sections": [
-        {"h": "Cheaper protein sources", "li": ["Eggs: versatile, quick and usually one of the lowest-cost proteins.", "Tinned legumes: chickpeas, lentils, kidney and cannellini beans. Dried is cheaper again.", "Tinned tuna, salmon and sardines.", "Firm tofu and tempeh.", "Chicken thighs and drumsticks, often cheaper than breast.", "Plain Greek-style yoghurt, cottage cheese and milk."]},
-        {"h": "Meal ideas", "li": ["Egg and veg fried rice using leftover rice and frozen veg.", "Lentil and veg bolognese, or half mince and half lentils.", "Chickpea and spinach curry with rice.", "Tuna and white bean pasta with lemon and parsley.", "Tofu stir-fry with whatever veg is on special.", "Baked chicken drumsticks with roast veg."]},
-        {"h": "Stretch the budget", "li": ["Buy home-brand tins and frozen veg; they're just as useful.", "Cook a big batch and freeze portions.", "Check unit pricing (price per 100 g or per kg) on shelf labels to compare packs.", "Shop markdowns on meat and freeze it the same day."]},
-        {"h": "How much protein?", "p": ["Needs vary with age, size, activity and health. Most Australians already get enough protein; spreading it across meals is a simple goal. If you have a health condition or specific goals, talk to a GP or Accredited Practising Dietitian."]}
+        {
+          "h": "Cheaper protein sources",
+          "li": [
+            "Eggs: versatile, quick and usually one of the lowest-cost proteins.",
+            "Tinned legumes: chickpeas, lentils, kidney and cannellini beans. Dried is cheaper again.",
+            "Tinned tuna, salmon and sardines.",
+            "Firm tofu and tempeh.",
+            "Chicken thighs and drumsticks, often cheaper than breast.",
+            "Plain Greek-style yoghurt, cottage cheese and milk."
+          ]
+        },
+        {
+          "h": "Meal ideas",
+          "li": [
+            "Egg and veg fried rice using leftover rice and frozen veg.",
+            "Lentil and veg bolognese, or half mince and half lentils.",
+            "Chickpea and spinach curry with rice.",
+            "Tuna and white bean pasta with lemon and parsley.",
+            "Tofu stir-fry with whatever veg is on special.",
+            "Baked chicken drumsticks with roast veg."
+          ]
+        },
+        {
+          "h": "Stretch the budget",
+          "li": [
+            "Buy home-brand tins and frozen veg; they're just as useful.",
+            "Cook a big batch and freeze portions.",
+            "Check unit pricing (price per 100 g or per kg) on shelf labels to compare packs.",
+            "Shop markdowns on meat and freeze it the same day."
+          ]
+        },
+        {
+          "h": "How much protein?",
+          "p": [
+            "Needs vary with age, size, activity and health. Most Australians already get enough protein; spreading it across meals is a simple goal. If you have a health condition or specific goals, talk to a GP or Accredited Practising Dietitian."
+          ]
+        }
       ]
     },
     {
@@ -56,12 +202,46 @@
       "title": "How to read food labels in Australia",
       "description": "A plain-English guide to the Nutrition Information Panel, ingredient lists, Health Star Ratings and date marks on Australian food packaging.",
       "sections": [
-        {"h": "Use the 'per 100 g' column", "p": ["Every Nutrition Information Panel shows values per serve and per 100 g (or 100 mL). Serving sizes are set by the manufacturer and differ between brands, so per 100 g is the fairest way to compare similar products."]},
-        {"h": "Ingredient lists", "li": ["Ingredients are listed in descending order by weight at the time of manufacture.", "If sugar, salt or fat appears near the top, there's a lot of it.", "Sugar goes by many names: glucose, sucrose, dextrose, maltose, honey, syrup, fruit juice concentrate and more.", "Characterising ingredients (e.g. strawberries in strawberry yoghurt) must show a percentage."]},
-        {"h": "Allergens", "p": ["Common allergens must be declared in bold in the ingredient list and summarised in a 'Contains' statement under Australian labelling rules. If you or someone you cook for has an allergy, read every label every time, as recipes change."]},
-        {"h": "Health Star Rating", "p": ["The Health Star Rating gives packaged foods 0.5 to 5 stars. It's most useful for comparing similar products (one breakfast cereal against another), not for comparing different foods (cereal against yoghurt). It's voluntary, so not every product carries it."]},
-        {"h": "Date marks", "li": ["Use-by: don't eat after this date, for safety reasons.", "Best-before: food may still be safe after this date if stored properly, but quality may decline."]},
-        {"h": "Country of origin", "p": ["Many foods show a country-of-origin label, often with a bar showing the proportion of Australian ingredients."]}
+        {
+          "h": "Use the 'per 100 g' column",
+          "p": [
+            "Every Nutrition Information Panel shows values per serve and per 100 g (or 100 mL). Serving sizes are set by the manufacturer and differ between brands, so per 100 g is the fairest way to compare similar products."
+          ]
+        },
+        {
+          "h": "Ingredient lists",
+          "li": [
+            "Ingredients are listed in descending order by weight at the time of manufacture.",
+            "If sugar, salt or fat appears near the top, there's a lot of it.",
+            "Sugar goes by many names: glucose, sucrose, dextrose, maltose, honey, syrup, fruit juice concentrate and more.",
+            "Characterising ingredients (e.g. strawberries in strawberry yoghurt) must show a percentage."
+          ]
+        },
+        {
+          "h": "Allergens",
+          "p": [
+            "Common allergens must be declared in bold in the ingredient list and summarised in a 'Contains' statement under Australian labelling rules. If you or someone you cook for has an allergy, read every label every time, as recipes change."
+          ]
+        },
+        {
+          "h": "Health Star Rating",
+          "p": [
+            "The Health Star Rating gives packaged foods 0.5 to 5 stars. It's most useful for comparing similar products (one breakfast cereal against another), not for comparing different foods (cereal against yoghurt). It's voluntary, so not every product carries it."
+          ]
+        },
+        {
+          "h": "Date marks",
+          "li": [
+            "Use-by: don't eat after this date, for safety reasons.",
+            "Best-before: food may still be safe after this date if stored properly, but quality may decline."
+          ]
+        },
+        {
+          "h": "Country of origin",
+          "p": [
+            "Many foods show a country-of-origin label, often with a bar showing the proportion of Australian ingredients."
+          ]
+        }
       ]
     },
     {
@@ -69,11 +249,43 @@
       "title": "Meal prep basics for busy weeks",
       "description": "A beginner's approach to meal prep: planning, batch cooking, safe storage and keeping it interesting so the food actually gets eaten.",
       "sections": [
-        {"h": "Start small", "p": ["You don't need 21 identical containers. Start by prepping two or three lunches, or one big dinner that covers two nights."]},
-        {"h": "A simple Sunday routine", "li": ["Check what's already in the fridge and pantry first.", "Pick one protein, one grain and two or three veg.", "Cook a batch of rice, quinoa or pasta.", "Roast a tray of veg and cook your protein.", "Make one sauce or dressing to change the flavour through the week."]},
-        {"h": "Mix and match", "p": ["Prepping components instead of whole meals keeps things interesting: the same chicken and rice can be a burrito bowl on Monday and fried rice on Wednesday."]},
-        {"h": "Storing food safely", "li": ["Cool cooked food quickly: get it into the fridge once it stops steaming, rather than leaving it on the bench for hours.", "Keep the fridge at 5 °C or below.", "Most cooked leftovers are best eaten within about three days; freeze anything for later in the week.", "Reheat until steaming hot all the way through."]},
-        {"h": "Freezer-friendly winners", "p": ["Soups, curries, bolognese, chilli, stews and cooked grains all freeze well. Label containers with the name and date."]}
+        {
+          "h": "Start small",
+          "p": [
+            "You don't need 21 identical containers. Start by prepping two or three lunches, or one big dinner that covers two nights."
+          ]
+        },
+        {
+          "h": "A simple Sunday routine",
+          "li": [
+            "Check what's already in the fridge and pantry first.",
+            "Pick one protein, one grain and two or three veg.",
+            "Cook a batch of rice, quinoa or pasta.",
+            "Roast a tray of veg and cook your protein.",
+            "Make one sauce or dressing to change the flavour through the week."
+          ]
+        },
+        {
+          "h": "Mix and match",
+          "p": [
+            "Prepping components instead of whole meals keeps things interesting: the same chicken and rice can be a burrito bowl on Monday and fried rice on Wednesday."
+          ]
+        },
+        {
+          "h": "Storing food safely",
+          "li": [
+            "Cool cooked food quickly: get it into the fridge once it stops steaming, rather than leaving it on the bench for hours.",
+            "Keep the fridge at 5 °C or below.",
+            "Most cooked leftovers are best eaten within about three days; freeze anything for later in the week.",
+            "Reheat until steaming hot all the way through."
+          ]
+        },
+        {
+          "h": "Freezer-friendly winners",
+          "p": [
+            "Soups, curries, bolognese, chilli, stews and cooked grains all freeze well. Label containers with the name and date."
+          ]
+        }
       ]
     },
     {
@@ -81,11 +293,41 @@
       "title": "Practical ways to cut back on added sugar",
       "description": "Where added sugar hides in Australian diets, how to spot it on labels, and easy swaps for drinks, breakfast and snacks.",
       "sections": [
-        {"h": "Added vs naturally occurring sugar", "p": ["The sugar in whole fruit, plain milk and plain yoghurt comes with fibre, protein or other nutrients. The World Health Organization recommends limiting free sugars (added sugars plus those in honey, syrups and juices) to less than 10% of daily energy, and ideally under 5%."]},
-        {"h": "Start with drinks", "p": ["Sugary drinks are one of the biggest sources of added sugar for many Australians. Swapping soft drink, energy drinks, cordial and juice for water, soda water with citrus, or unsweetened tea and coffee is often the single biggest change."]},
-        {"h": "Spot it on the label", "li": ["Check sugars per 100 g in the Nutrition Information Panel to compare products.", "Look for sugar's aliases in the ingredient list: syrup, dextrose, maltose, honey, concentrated fruit juice and anything ending in '-ose'.", "Flavoured yoghurts, sauces, muesli bars and breakfast cereals often carry more than you'd expect."]},
-        {"h": "Easy swaps", "li": ["Plain yoghurt with fresh or frozen berries instead of flavoured yoghurt.", "Rolled oats with banana or cinnamon instead of sweetened cereal.", "A piece of fruit or a handful of unsalted nuts instead of a muesli bar.", "Halve the sugar in home baking; most recipes still work."]},
-        {"h": "Go gradually", "p": ["Taste preferences adjust over a few weeks. Cutting back step by step, like one less teaspoon in your tea each week, tends to last longer than going cold turkey."]}
+        {
+          "h": "Added vs naturally occurring sugar",
+          "p": [
+            "The sugar in whole fruit, plain milk and plain yoghurt comes with fibre, protein or other nutrients. The World Health Organization recommends limiting free sugars (added sugars plus those in honey, syrups and juices) to less than 10% of daily energy, and ideally under 5%."
+          ]
+        },
+        {
+          "h": "Start with drinks",
+          "p": [
+            "Sugary drinks are one of the biggest sources of added sugar for many Australians. Swapping soft drink, energy drinks, cordial and juice for water, soda water with citrus, or unsweetened tea and coffee is often the single biggest change."
+          ]
+        },
+        {
+          "h": "Spot it on the label",
+          "li": [
+            "Check sugars per 100 g in the Nutrition Information Panel to compare products.",
+            "Look for sugar's aliases in the ingredient list: syrup, dextrose, maltose, honey, concentrated fruit juice and anything ending in '-ose'.",
+            "Flavoured yoghurts, sauces, muesli bars and breakfast cereals often carry more than you'd expect."
+          ]
+        },
+        {
+          "h": "Easy swaps",
+          "li": [
+            "Plain yoghurt with fresh or frozen berries instead of flavoured yoghurt.",
+            "Rolled oats with banana or cinnamon instead of sweetened cereal.",
+            "A piece of fruit or a handful of unsalted nuts instead of a muesli bar.",
+            "Halve the sugar in home baking; most recipes still work."
+          ]
+        },
+        {
+          "h": "Go gradually",
+          "p": [
+            "Taste preferences adjust over a few weeks. Cutting back step by step, like one less teaspoon in your tea each week, tends to last longer than going cold turkey."
+          ]
+        }
       ]
     },
     {
@@ -93,11 +335,44 @@
       "title": "Eating out smarter without missing out",
       "description": "Simple strategies for cafes, pubs, takeaway and restaurants: what to look for on the menu and how to balance the plate while still enjoying the meal.",
       "sections": [
-        {"h": "Enjoy it", "p": ["Eating out is social and fun. A few small choices can make it fit your routine without turning dinner into maths."]},
-        {"h": "Reading the menu", "li": ["Grilled, steamed, baked or poached usually means less added fat than fried, battered or crispy.", "Look for a side of veg or salad, or ask to swap chips for one.", "Ask for sauces and dressings on the side.", "Large chains in some states display kilojoules on menus; use them for comparison if helpful."]},
-        {"h": "At the pub", "li": ["Grilled fish or a steak with salad and veg.", "Share a bowl of wedges rather than having your own.", "Alternate alcoholic drinks with water."]},
-        {"h": "Asian takeaway", "li": ["Stir-fries, steamed dumplings and soups like pho are often lighter than deep-fried dishes.", "Order an extra veg dish to share and go easy on the fried rice."]},
-        {"h": "Portion tips", "li": ["Share an entrée or dessert.", "Take leftovers home.", "Eat slowly and check in with how full you feel halfway through."]}
+        {
+          "h": "Enjoy it",
+          "p": [
+            "Eating out is social and fun. A few small choices can make it fit your routine without turning dinner into maths."
+          ]
+        },
+        {
+          "h": "Reading the menu",
+          "li": [
+            "Grilled, steamed, baked or poached usually means less added fat than fried, battered or crispy.",
+            "Look for a side of veg or salad, or ask to swap chips for one.",
+            "Ask for sauces and dressings on the side.",
+            "Large chains in some states display kilojoules on menus; use them for comparison if helpful."
+          ]
+        },
+        {
+          "h": "At the pub",
+          "li": [
+            "Grilled fish or a steak with salad and veg.",
+            "Share a bowl of wedges rather than having your own.",
+            "Alternate alcoholic drinks with water."
+          ]
+        },
+        {
+          "h": "Asian takeaway",
+          "li": [
+            "Stir-fries, steamed dumplings and soups like pho are often lighter than deep-fried dishes.",
+            "Order an extra veg dish to share and go easy on the fried rice."
+          ]
+        },
+        {
+          "h": "Portion tips",
+          "li": [
+            "Share an entrée or dessert.",
+            "Take leftovers home.",
+            "Eat slowly and check in with how full you feel halfway through."
+          ]
+        }
       ]
     },
     {
@@ -105,11 +380,42 @@
       "title": "Reducing food waste at home",
       "description": "Plan, store and use up food better: practical habits that save money and stop good food ending up in the bin.",
       "sections": [
-        {"h": "Why it matters", "p": ["Australian households throw out a significant share of the food they buy. Less waste means a lower grocery bill and less food to landfill."]},
-        {"h": "Shop smarter", "li": ["Take a photo of the fridge and pantry before shopping so you don't double up.", "Plan a few meals and write a list.", "Buy loose produce so you get only what you need."]},
-        {"h": "Store it right", "li": ["Keep herbs in a glass of water or wrapped in a damp paper towel.", "Store bread in the freezer and toast from frozen.", "Use the 'first in, first out' rule: move older items to the front."]},
-        {"h": "Use it up", "li": ["Wilted veg goes into soups, frittatas, fried rice or pasta sauce.", "Overripe bananas become banana bread or frozen smoothie packs.", "Have a weekly 'use-it-up' night."]},
-        {"h": "Know your dates", "p": ["Use-by dates are about safety; don't eat food past them. Best-before dates are about quality, so food may still be fine after them if stored properly. When in doubt, throw it out."]}
+        {
+          "h": "Why it matters",
+          "p": [
+            "Australian households throw out a significant share of the food they buy. Less waste means a lower grocery bill and less food to landfill."
+          ]
+        },
+        {
+          "h": "Shop smarter",
+          "li": [
+            "Take a photo of the fridge and pantry before shopping so you don't double up.",
+            "Plan a few meals and write a list.",
+            "Buy loose produce so you get only what you need."
+          ]
+        },
+        {
+          "h": "Store it right",
+          "li": [
+            "Keep herbs in a glass of water or wrapped in a damp paper towel.",
+            "Store bread in the freezer and toast from frozen.",
+            "Use the 'first in, first out' rule: move older items to the front."
+          ]
+        },
+        {
+          "h": "Use it up",
+          "li": [
+            "Wilted veg goes into soups, frittatas, fried rice or pasta sauce.",
+            "Overripe bananas become banana bread or frozen smoothie packs.",
+            "Have a weekly 'use-it-up' night."
+          ]
+        },
+        {
+          "h": "Know your dates",
+          "p": [
+            "Use-by dates are about safety; don't eat food past them. Best-before dates are about quality, so food may still be fine after them if stored properly. When in doubt, throw it out."
+          ]
+        }
       ]
     },
     {
@@ -117,10 +423,156 @@
       "title": "Healthy lunchbox ideas for school and work",
       "description": "Easy, balanced lunchbox combinations for kids and adults, built around the five food groups and leftovers.",
       "sections": [
-        {"h": "A simple lunchbox formula", "li": ["A main: sandwich, wrap, leftovers, sushi or a pasta salad.", "A crunchy veg: carrot sticks, cucumber, cherry tomatoes, snow peas.", "A fruit: whole or cut.", "A dairy or alternative: cheese cubes, plain yoghurt, milk.", "Water to drink."]},
-        {"h": "Mix up the main", "li": ["Wholemeal wraps with chicken, salad and hummus.", "Last night's fried rice, pasta bake or chicken adobo with rice.", "Egg and lettuce sandwiches on wholegrain bread.", "Rice paper rolls with tofu or prawns and veg."]},
-        {"h": "Keep it safe", "li": ["Pack an ice brick or frozen water bottle with perishable foods.", "Keep cooked leftovers in the fridge until you leave.", "Check your school's policies on nuts and other allergens."]},
-        {"h": "Save time", "p": ["Chop veg sticks for the week on Sunday, and cook extra dinner for next-day lunches."]}
+        {
+          "h": "A simple lunchbox formula",
+          "li": [
+            "A main: sandwich, wrap, leftovers, sushi or a pasta salad.",
+            "A crunchy veg: carrot sticks, cucumber, cherry tomatoes, snow peas.",
+            "A fruit: whole or cut.",
+            "A dairy or alternative: cheese cubes, plain yoghurt, milk.",
+            "Water to drink."
+          ]
+        },
+        {
+          "h": "Mix up the main",
+          "li": [
+            "Wholemeal wraps with chicken, salad and hummus.",
+            "Last night's fried rice, pasta bake or chicken adobo with rice.",
+            "Egg and lettuce sandwiches on wholegrain bread.",
+            "Rice paper rolls with tofu or prawns and veg."
+          ]
+        },
+        {
+          "h": "Keep it safe",
+          "li": [
+            "Pack an ice brick or frozen water bottle with perishable foods.",
+            "Keep cooked leftovers in the fridge until you leave.",
+            "Check your school's policies on nuts and other allergens."
+          ]
+        },
+        {
+          "h": "Save time",
+          "p": [
+            "Chop veg sticks for the week on Sunday, and cook extra dinner for next-day lunches."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "portion-sizes-without-scales",
+      "title": "Portion sizes without scales: a hand-and-plate guide",
+      "description": "A simple way to estimate sensible portions using your hand and a standard dinner plate, no food scales or calorie counting required. General information, not medical advice.",
+      "sections": [
+        {
+          "h": "Why a rough guide is enough",
+          "p": [
+            "Most people don't need to weigh food to eat a bit better. A consistent visual guide helps you serve similar amounts each time, which makes it easier to notice what works for you."
+          ]
+        },
+        {
+          "h": "The plate method",
+          "li": [
+            "Half the plate: vegetables or salad.",
+            "A quarter: protein such as fish, chicken, eggs, tofu or legumes.",
+            "A quarter: carbs such as rice, pasta, potato or bread.",
+            "A small amount of healthy fat: oil, avocado, nuts or cheese."
+          ]
+        },
+        {
+          "h": "Using your hand",
+          "li": [
+            "Protein: about the size and thickness of your palm.",
+            "Carbs: about a cupped handful.",
+            "Vegetables: about two fists or more.",
+            "Fats: about the size of your thumb."
+          ]
+        },
+        {
+          "h": "Adjust to you",
+          "p": [
+            "Hands scale roughly with body size, but needs differ with activity, age and health. If you have a medical condition or specific goals, check with your GP or an Accredited Practising Dietitian."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "weekly-meal-plan-on-a-budget",
+      "title": "How to plan a week of meals on a budget",
+      "description": "A step-by-step method for planning a week of dinners in Australia that uses what you already have, shares ingredients across meals and keeps the shopping list short.",
+      "sections": [
+        {
+          "h": "Start with a stocktake",
+          "p": [
+            "Before you plan, check the fridge, freezer and pantry. Build at least one or two meals around things that need using up."
+          ]
+        },
+        {
+          "h": "Pick a simple structure",
+          "li": [
+            "Two meals that make leftovers for lunches.",
+            "One pantry meal (tins, pasta, rice, eggs).",
+            "One meat-free night built on legumes or eggs.",
+            "One flexible night for leftovers or a freezer meal."
+          ]
+        },
+        {
+          "h": "Share ingredients across meals",
+          "p": [
+            "Choose recipes that reuse the same herbs, vegetables and proteins. A bunch of coriander or a bag of spinach can stretch across three dinners instead of wilting after one."
+          ]
+        },
+        {
+          "h": "Shop smart",
+          "li": [
+            "Write the list by store section to avoid backtracking.",
+            "Check unit prices on shelf labels, not just pack prices.",
+            "Frozen vegetables and tinned legumes are cheap, nutritious staples.",
+            "Buy seasonal produce; it's usually cheaper and better."
+          ]
+        },
+        {
+          "h": "Keep it realistic",
+          "p": [
+            "Plan for the week you actually have. On busy nights, a quick pantry meal you'll cook beats an ambitious recipe you won't."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "healthy-breakfast-ideas",
+      "title": "Quick healthy breakfast ideas for busy mornings",
+      "description": "Practical, quick breakfast ideas with protein and fibre, using everyday Australian supermarket ingredients, plus tips for preparing ahead.",
+      "sections": [
+        {
+          "h": "What makes a filling breakfast",
+          "p": [
+            "Breakfasts with some protein and fibre tend to keep you fuller for longer than sugary cereals or pastries alone."
+          ]
+        },
+        {
+          "h": "Five-minute options",
+          "li": [
+            "Greek yoghurt with oats, berries and a few nuts.",
+            "Wholegrain toast with eggs, or with peanut butter and banana.",
+            "Rolled oats cooked with milk, topped with fruit.",
+            "Baked beans on wholegrain toast.",
+            "Leftover rice with an egg and greens."
+          ]
+        },
+        {
+          "h": "Prepare ahead",
+          "li": [
+            "Overnight oats in jars for three or four days.",
+            "A batch of egg and vegetable muffins to reheat.",
+            "Pre-portioned smoothie bags in the freezer."
+          ]
+        },
+        {
+          "h": "Watch the extras",
+          "p": [
+            "Check labels on flavoured yoghurts, granola and breakfast drinks; they can contain a lot of added sugar. Plain versions with fruit added at home are an easy swap."
+          ]
+        }
       ]
     }
   ]
